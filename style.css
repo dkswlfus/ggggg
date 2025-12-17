@@ -1,0 +1,102 @@
+/* 기본 설정 */
+body {
+    font-family: 'Pretendard', sans-serif;
+    background-color: #fff5f7; /* 매우 연한 핑크 */
+    color: #4a4a4a;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+header h1 {
+    color: #ff8fa3;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* 그리드 레이아웃 */
+.dictionary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    width: 90%;
+    max-width: 1000px;
+    padding-bottom: 50px;
+}
+
+/* 카드 디자인 */
+.card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(255, 182, 193, 0.2);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* 사진 비율 유지 */
+}
+
+.card h3 {
+    padding: 15px 0;
+    color: #ff748c;
+}
+
+/* 모달창 (팝업) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 40px;
+    border-radius: 30px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.2);
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 25px;
+    cursor: pointer;
+    color: #aaa;
+}
+
+#modal-title { color: #ff748c; margin-bottom: 5px; }
+#modal-hanja { color: #888; margin-bottom: 20px; font-weight: normal; }
+#modal-meaning { line-height: 1.6; font-size: 1.1rem; }

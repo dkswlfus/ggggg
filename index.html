@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>디지털 한자 성어 사전</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🌸 디지털 한자 성어 사전</h1>
+        <p>사진을 클릭하여 성어의 의미를 확인해보세요.</p>
+    </header>
+
+    <main class="dictionary-grid">
+        <div class="card" onclick="showDetails('백아절현', '伯牙絶絃', '백아가 거문고 줄을 끊다. 자기를 알아주는 절친한 벗의 죽음을 슬퍼함.')">
+            <img src="baek.jpeg" alt="백아절현">
+            <h3>백아절현</h3>
+        </div>
+
+        <div class="card" onclick="showDetails('단기지계', '斷機之戒', '학업을 중도에 그만둠은 짜던 베의 날을 끊는 것과 같다는 훈계.')">
+            <img src="dan.jpg" alt="단기지계">
+            <h3>단기지계</h3>
+        </div>
+
+        <div class="card" onclick="showDetails('함흥차사', '咸興差使', '심부름 간 사람이 소식이 없거나 회답이 더딜 때 쓰는 말.')">
+            <img src="ham.jpg" alt="함흥차사">
+            <h3>함흥차사</h3>
+        </div>
+
+        <div class="card" onclick="showDetails('각주구검', '刻舟求劍', '융통성 없이 고집만 부려 어리석은 사람을 비유하는 말.')">
+            <img src="gak.jpeg" alt="각주구검">
+            <h3>각주구검</h3>
+        </div>
+
+        <div class="card" onclick="showDetails('군자불기', '君子不器', '군자는 한 가지 용도로만 쓰이는 그릇 같은 사람이 아니라는 뜻.')">
+            <img src="gun.jpg" alt="군자불기">
+            <h3>군자불기</h3>
+        </div>
+
+        <div class="card" onclick="showDetails('동병상련', '同病相憐', '같은 처지에 있는 사람끼리 서로 가엾게 여기며 동정함.')">
+            <img src="dong.jpg" alt="동병상련">
+            <h3>동병상련</h3>
+        </div>
+    </main>
+
+    <div id="modal" class="modal" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title"></h2>
+            <h4 id="modal-hanja"></h4>
+            <p id="modal-meaning"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
